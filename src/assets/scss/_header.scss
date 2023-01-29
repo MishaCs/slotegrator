@@ -1,0 +1,303 @@
+
+.header-top {
+    background-color: $light-light-grey;
+
+    &__wrap {
+        @include wrap;
+        display: flex;
+        align-items: center;
+        padding: 21px 50px;
+
+        @media screen and (max-width: $mobile) {
+            padding: 21px 30px;
+        }
+
+        @media screen and (max-width: $small) {
+            padding: 10px;
+        }
+    }
+
+    &__text {
+        margin-right: auto;
+
+        @media screen and (max-width: $laptop) {
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: $mobile) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: $small) {
+            font-size: 10px;
+            line-height: 1.1;
+        }
+    }
+
+    &__select {
+        margin-right: 26px;
+    }
+}
+
+.header-top.hidden {
+    display: none;
+}
+
+.select {
+    position: relative;
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0px 1px 5px rgba(0, 26, 66, 0.15);
+        border-radius: 10px;
+        padding: 10px;
+        width: 138px;
+        cursor: pointer;
+        font-size: 16px;
+
+        @media screen and (max-width: $small) {
+            font-size: 12px;
+            padding: 5px;
+            width: 116px;
+        }
+
+        &::after {
+            content: '';
+            width: 11px;
+            height: 7px;
+            display: block;
+            background-image: url('../img/arrow-down.svg');
+            @include background-size;
+            margin-left: 10px;
+        }
+
+        &::before {
+            @include flag;
+        }
+    }
+
+    div[data-lang="ger"] {
+        &::before {
+            background-image: url('../img/flags/ger.svg');
+        }
+    }
+
+    div[data-lang="eng"] {
+        &::before {
+            background-image: url('../img/flags/eng.svg');
+        }
+    }
+
+    &__list {
+        position: absolute;
+        width: 208px;
+        top: 115%;
+        right: 0px;
+        display: none;
+        z-index: 3;
+    }
+
+    &__list.active {
+        display: block;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        @media screen and (max-width: $small) {
+            max-width: 130px;
+        }
+    }
+}
+
+.select-list {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 26, 66, 0.15);
+    border-radius: 10px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 16px;
+
+        &::before {
+            @include flag;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 11px;
+    }
+}
+
+.close-button {
+    width: 13px;
+    height: 13px;
+    background-image: url('../img/close.svg');
+    @include background-size;
+}
+
+.search {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 6px 10px rgba(0, 9, 95, 0.05);
+
+    &__logo-img {
+        margin-right: 60px;
+
+        @media screen and (max-width: $mobile) {
+            margin-right: auto;
+        }
+    }
+
+    &__wrap {
+        @include wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 50px;
+
+        @media screen and (max-width: $mobile) {
+            padding: 14px 30px;
+        }
+
+        @media screen and (max-width: $small) {
+            padding: 10px;
+        }
+    }
+
+    &__nav {
+        margin-right: 19px;
+        width: 100%;
+    }
+
+    &__contact-us {
+        flex-shrink: 0;
+
+        @media screen and (max-width: $laptop) {
+            margin-right: 20px;
+        }
+
+        @media screen and (max-width: $small) {
+            margin-right: 10px;
+        }
+    }
+
+    &__search {
+        margin-right: 60px;
+
+        @media screen and (max-width: $laptop) {
+            display: none;
+        }
+    }
+
+    &__btn-contact {
+        display: none;
+
+        @media screen and (max-width: $laptop) {
+            display: block;
+        }
+    }
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    @media screen and (max-width: $laptop) {
+        display: none;
+    }
+
+    &__item {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        color: rgba($navy-blue, .7);
+        cursor: pointer;
+        position: relative;
+        border-radius: 5px;
+        transition: .3s;
+        background: #fff;
+
+        &::after {
+            @include arrow;
+        }
+
+        &:hover {
+            background-color: $light-light-grey;
+            color: rgba($navy-blue, 1);
+        }
+    }
+
+    &__item:nth-child(4) {
+        margin-left: auto;
+    }
+
+    &__item.active {
+        color: rgba($navy-blue, 1);
+        background-color: $light-grey;
+    }
+
+    &__drop-down {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        display: none;
+    }
+
+    &__drop-down.active {
+        display: block;
+    }
+}
+
+.contact-us {
+    padding: 11px 19px;
+    font-weight: 600;
+    color: #fff;
+    background-color: $red-light;
+    border-radius: 5px;
+
+    @media screen and (max-width: $mobile) {
+        font-size: 14px;
+    }
+}
+
+.drop-down {
+    padding: 25px 0;
+    box-shadow: 0px 1px 5px rgba(0, 26, 66, 0.15);
+    border-radius: 10px;
+    width: max-content;
+
+    &__item {
+        padding: 5px 25px;
+        color: rgba($navy-blue, .7);
+        transition: background .3s;
+
+        &:hover {
+            background: $light-light-grey;
+            font-weight: 600;
+        }
+
+    }
+}
+
+.btn-contact {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background-image: url('../img/btn-contact.svg');
+    @include background-size;
+}

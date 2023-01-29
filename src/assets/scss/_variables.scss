@@ -1,0 +1,40 @@
+$light-light-grey: #F6F8FA;
+$light-grey: #E3E8EC;
+$navy-blue: #16103E;
+$red-light: #E92128;
+
+$laptop: 1281px;
+$tablet: 1042px;
+$mobile: 640px;
+$small: 440px;
+
+@mixin wrap {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+
+@mixin background-size {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin arrow {
+    content: '';
+    width: 11px;
+    height: 7px;
+    display: block;
+    background-image: url('../img/arrow-down.svg');
+    @include background-size;
+    margin-left: 10px;
+}
+
+@mixin flag {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 26px;
+    @include background-size;
+    margin-right: 10px;
+}
