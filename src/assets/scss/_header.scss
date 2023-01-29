@@ -19,6 +19,7 @@
 
     &__text {
         margin-right: auto;
+        line-height: 135%;
 
         @media screen and (max-width: $laptop) {
             margin-right: 20px;
@@ -170,7 +171,7 @@
         padding: 14px 50px;
 
         @media screen and (max-width: $mobile) {
-            padding: 14px 30px;
+            padding: 14px 25px;
         }
 
         @media screen and (max-width: $small) {
