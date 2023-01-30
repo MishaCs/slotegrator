@@ -56,6 +56,11 @@ ul {
           padding-inline-start: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #16103E;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -409,6 +414,11 @@ ul {
           padding-inline-start: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #16103E;
+}
+
 .header-top {
   background-color: #F6F8FA;
 }
@@ -714,6 +724,9 @@ ul {
 .drop-down__item:hover {
   background: #F6F8FA;
   font-weight: 600;
+}
+.drop-down__link {
+  color: rgba(22, 16, 62, 0.7);
 }
 
 .btn-contact {

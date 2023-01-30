@@ -291,7 +291,10 @@
             background: $light-light-grey;
             font-weight: 600;
         }
+    }
 
+    &__link {
+        color: rgba($navy-blue, .7); 
     }
 }
 
